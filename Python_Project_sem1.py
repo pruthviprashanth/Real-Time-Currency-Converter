@@ -86,10 +86,11 @@ tk.Label(
     font=("Arial", 16, "bold")
 ).pack(pady=10)
 
-# Fetch currencies
+#Fetch currencies
 currency_codes = get_currency_list()
 if not currency_codes:
-    currency_codes = ["USD", "INR", "EUR"]
+    messagebox.showwarning("Offline ", "no internet connection")
+
 
 # Create display list with country names
 display_list = [
